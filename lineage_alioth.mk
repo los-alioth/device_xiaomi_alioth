@@ -15,6 +15,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_USES_MIUI_CAMERA := true
 TARGET_INCLUDES_MIUI_CAMERA := true
 
+# Inherit some common stuff.
+TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
@@ -27,3 +32,14 @@ PRODUCT_MODEL := POCO F3
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 BUILD_FINGERPRINT := POCO/alioth_global/alioth:13/TKQ1.221114.001/V816.0.2.0.TKHMIXM:user/release-keys
+
+# Matrixx
+MATRIXX_BUILD_TYPE := FAN-EDITON
+MATRIXX_MAINTAINER := nhAsif
+MATRIXX_CHIPSET := SM8250
+MATRIXX_BATTERY := 4520mAh
+MATRIXX_DISPLAY := 1080x2400
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+# Nuke AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
